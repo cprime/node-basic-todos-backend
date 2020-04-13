@@ -72,7 +72,7 @@ module.exports = {
     return Todo.findByPk(req.params.todoId)
       .then((todo) => {
         if (!todo) {
-          return res.status(400).send({
+          return res.status(404).send({
             message: "Todo Not Found",
           });
         }
